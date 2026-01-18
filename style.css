@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', monospace;
+    background: #000;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.matrix-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #00ff00, #000);
+    opacity: 0.1;
+    animation: matrixGlow 2s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes matrixGlow {
+    0% { opacity: 0.1; }
+    100% { opacity: 0.3; }
+}
+
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px #00ff00, inset 0 0 50px rgba(0, 255, 0, 0.1);
+    border: 2px solid #00ff00;
+    animation: containerGlow 1.5s infinite alternate;
+    width: 90%;
+    max-width: 350px;
+}
+
+@keyframes containerGlow {
+    0% { box-shadow: 0 0 30px #00ff00, inset 0 0 30px rgba(0, 255, 0, 0.1); }
+    100% { box-shadow: 0 0 60px #00ff41, inset 0 0 60px rgba(0, 255, 0, 0.2); }
+}
+
+h2 {
+    color: #00ff00;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #00ff00;
+    animation: textGlow 1s infinite alternate;
+}
+
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px #00ff00; }
+    100% { text-shadow: 0 0 20px #00ff41, 0 0 30px #00ff41; }
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    color: #00ff00;
+    font-family: 'Orbitron', monospace;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 20px #00ff00;
+    border-color: #00ff41;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #00ff00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Orbitron', monospace;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+button:hover {
+    background: #00ff41;
+    box-shadow: 0 0 30px #00ff41;
+    transform: scale(1.05);
+}
+
+p {
+    text-align: center;
+    color: #00ff00;
+    margin-top: 20px;
+}
+
+a {
+    color: #00ff41;
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0 0 10px #00ff41;
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+}
